@@ -1,0 +1,17 @@
+node_modules
+.next
+.next-*
+out
+dist
+coverage
+output
+.playwright-cli
+.turbo
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+!.env.example
+pnpm-debug.log*
+.vercel
+.codex-*.log

@@ -1,0 +1,29 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    environment: npm
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.34.5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.14.0
+          cache: pnpm
+          registry-url: https://registry.npmjs.org
+      - run: npm install --global npm@11.5.1
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm verify
+      - run: pnpm audit --prod --audit-level high --ignore-registry-errors
+      - run: pnpm -r --filter @vulyo/core --filter @vulyo/react --filter @vulyo/nextjs publish --access public --provenance --no-git-checks
