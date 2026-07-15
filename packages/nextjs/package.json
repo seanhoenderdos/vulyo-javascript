@@ -1,26 +1,63 @@
 {
   "name": "@vulyo/nextjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "First-party Vulyo authentication adapters and components for the Next.js App Router.",
   "license": "MIT",
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20.19 <25" },
-  "repository": { "type": "git", "url": "git+https://github.com/seanhoenderdos/vulyo-javascript.git", "directory": "packages/nextjs" },
-  "bugs": { "url": "https://github.com/seanhoenderdos/vulyo-javascript/issues" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.19 <25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanhoenderdos/vulyo-javascript.git",
+    "directory": "packages/nextjs"
+  },
+  "bugs": {
+    "url": "https://github.com/seanhoenderdos/vulyo-javascript/issues"
+  },
   "homepage": "https://vulyo.com",
-  "keywords": ["authentication", "nextjs", "react", "vulyo"],
+  "keywords": [
+    "authentication",
+    "nextjs",
+    "react",
+    "vulyo"
+  ],
   "sideEffects": false,
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
-    "./server": { "types": "./dist/server.d.ts", "import": "./dist/server.js" },
-    "./callback": { "types": "./dist/callback.d.ts", "import": "./dist/callback.js" },
-    "./route-handler": { "types": "./dist/route-handler.d.ts", "import": "./dist/route-handler.js" },
-    "./middleware": { "types": "./dist/middleware.d.ts", "import": "./dist/middleware.js" },
-    "./neon": { "types": "./dist/neon.d.ts", "import": "./dist/neon.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./server": {
+      "types": "./dist/server.d.ts",
+      "import": "./dist/server.js"
+    },
+    "./callback": {
+      "types": "./dist/callback.d.ts",
+      "import": "./dist/callback.js"
+    },
+    "./route-handler": {
+      "types": "./dist/route-handler.d.ts",
+      "import": "./dist/route-handler.js"
+    },
+    "./middleware": {
+      "types": "./dist/middleware.d.ts",
+      "import": "./dist/middleware.js"
+    },
+    "./neon": {
+      "types": "./dist/neon.d.ts",
+      "import": "./dist/neon.js"
+    }
   },
   "scripts": {
     "prebuild": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
@@ -29,8 +66,16 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run --passWithNoTests"
   },
-  "dependencies": { "@vulyo/core": "workspace:*", "@vulyo/react": "workspace:*", "jose": "^6.2.3" },
-  "peerDependencies": { "next": ">=16 <17", "react": ">=19 <20", "react-dom": ">=19 <20" },
+  "dependencies": {
+    "@vulyo/core": "workspace:*",
+    "@vulyo/react": "workspace:*",
+    "jose": "^6.2.3"
+  },
+  "peerDependencies": {
+    "next": ">=16 <17",
+    "react": ">=19 <20",
+    "react-dom": ">=19 <20"
+  },
   "devDependencies": {
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

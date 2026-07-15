@@ -1,6 +1,6 @@
 import { VULYO_SESSION_COOKIE } from "@vulyo/core";
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
+import { cookies } from "next/headers.js";
+import { redirect } from "next/navigation.js";
 import { cache } from "react";
 import { vulyoRoutes } from "@vulyo/core/routes";
 import { type VulyoAdapterOptions } from "./config.js";

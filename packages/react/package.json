@@ -1,20 +1,44 @@
 {
   "name": "@vulyo/react",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Accessible, brandable authentication components and hooks for Vulyo React applications.",
   "license": "MIT",
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20.19 <25" },
-  "repository": { "type": "git", "url": "git+https://github.com/seanhoenderdos/vulyo-javascript.git", "directory": "packages/react" },
-  "bugs": { "url": "https://github.com/seanhoenderdos/vulyo-javascript/issues" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.19 <25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanhoenderdos/vulyo-javascript.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/seanhoenderdos/vulyo-javascript/issues"
+  },
   "homepage": "https://vulyo.com",
-  "keywords": ["authentication", "react", "components", "vulyo"],
+  "keywords": [
+    "authentication",
+    "react",
+    "components",
+    "vulyo"
+  ],
   "sideEffects": false,
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
   "scripts": {
     "prebuild": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
     "build": "tsc -p tsconfig.json",
@@ -28,7 +52,10 @@
     "@vulyo/core": "workspace:*",
     "lucide-react": "^0.562.0"
   },
-  "peerDependencies": { "react": ">=19 <20", "react-dom": ">=19 <20" },
+  "peerDependencies": {
+    "react": ">=19 <20",
+    "react-dom": ">=19 <20"
+  },
   "devDependencies": {
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",

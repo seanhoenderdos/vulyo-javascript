@@ -10,10 +10,11 @@
     "test": "pnpm -r test",
     "lint": "pnpm -r lint",
     "pack:check": "node scripts/verify-package-contents.mjs",
-    "verify": "pnpm build && pnpm typecheck && pnpm test && pnpm pack:check",
+    "runtime:check": "node scripts/verify-runtime-imports.mjs",
+    "verify": "pnpm build && pnpm runtime:check && pnpm typecheck && pnpm test && pnpm pack:check",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "pnpm verify && pnpm -r --filter @vulyo/core --filter @vulyo/react --filter @vulyo/nextjs publish --access public --provenance --no-git-checks"
+    "release": "pnpm verify && pnpm changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.31.0",

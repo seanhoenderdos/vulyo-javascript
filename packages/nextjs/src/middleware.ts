@@ -1,7 +1,7 @@
 import { VULYO_REFRESH_COOKIE, VULYO_SESSION_COOKIE } from "@vulyo/core";
 import { vulyoRoutes } from "@vulyo/core/routes";
-import type { NextRequest } from "next/server";
-import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server.js";
+import { NextResponse } from "next/server.js";
 import { type VulyoAdapterOptions } from "./config.js";
 import { clearSessionCookies, setSessionCookies } from "./route-handler.js";
 import { refreshVulyoSession, shouldRefreshVulyoSession, validateVulyoAccessToken } from "./validation.js";

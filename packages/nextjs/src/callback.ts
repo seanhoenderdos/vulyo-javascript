@@ -1,6 +1,6 @@
 import { VULYO_TRANSACTION_COOKIE } from "@vulyo/core";
 import { vulyoRoutes } from "@vulyo/core/routes";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server.js";
 import { authorizationHeaders } from "./validation.js";
 import { resolveVulyoAdapterOptions, type VulyoAdapterOptions } from "./config.js";
 import { clearSessionCookies, setSessionCookies } from "./route-handler.js";

@@ -7,7 +7,7 @@ import {
 } from "@vulyo/core";
 import { vulyoRoutes } from "@vulyo/core/routes";
 import { randomBytes } from "node:crypto";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server.js";
 import { authorizationHeaders, refreshVulyoSession, validateVulyoAccessToken, VULYO_ACCESS_COOKIE_MAX_AGE } from "./validation.js";
 import { resolveVulyoAdapterOptions, type VulyoAdapterOptions } from "./config.js";
 

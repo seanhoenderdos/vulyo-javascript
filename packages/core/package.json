@@ -1,27 +1,67 @@
 {
   "name": "@vulyo/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "Framework-neutral authentication contracts and token verification for Vulyo.",
   "license": "MIT",
-  "files": ["dist", "README.md", "LICENSE"],
-  "engines": { "node": ">=20.19 <25" },
-  "repository": { "type": "git", "url": "git+https://github.com/seanhoenderdos/vulyo-javascript.git", "directory": "packages/core" },
-  "bugs": { "url": "https://github.com/seanhoenderdos/vulyo-javascript/issues" },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.19 <25"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanhoenderdos/vulyo-javascript.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/seanhoenderdos/vulyo-javascript/issues"
+  },
   "homepage": "https://vulyo.com",
-  "keywords": ["authentication", "identity", "sessions", "vulyo"],
+  "keywords": [
+    "authentication",
+    "identity",
+    "sessions",
+    "vulyo"
+  ],
   "sideEffects": false,
-  "publishConfig": { "access": "public" },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" },
-    "./app-settings": { "types": "./dist/auth/app-settings.d.ts", "import": "./dist/auth/app-settings.js" },
-    "./applications": { "types": "./dist/auth/applications.d.ts", "import": "./dist/auth/applications.js" },
-    "./auth-forms": { "types": "./dist/auth/auth-forms.d.ts", "import": "./dist/auth/auth-forms.js" },
-    "./password-reset-forms": { "types": "./dist/auth/password-reset-forms.d.ts", "import": "./dist/auth/password-reset-forms.js" },
-    "./routes": { "types": "./dist/routes.d.ts", "import": "./dist/routes.js" },
-    "./waitlist": { "types": "./dist/auth/waitlist.d.ts", "import": "./dist/auth/waitlist.js" }
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./app-settings": {
+      "types": "./dist/auth/app-settings.d.ts",
+      "import": "./dist/auth/app-settings.js"
+    },
+    "./applications": {
+      "types": "./dist/auth/applications.d.ts",
+      "import": "./dist/auth/applications.js"
+    },
+    "./auth-forms": {
+      "types": "./dist/auth/auth-forms.d.ts",
+      "import": "./dist/auth/auth-forms.js"
+    },
+    "./password-reset-forms": {
+      "types": "./dist/auth/password-reset-forms.d.ts",
+      "import": "./dist/auth/password-reset-forms.js"
+    },
+    "./routes": {
+      "types": "./dist/routes.d.ts",
+      "import": "./dist/routes.js"
+    },
+    "./waitlist": {
+      "types": "./dist/auth/waitlist.d.ts",
+      "import": "./dist/auth/waitlist.js"
+    }
   },
   "scripts": {
     "prebuild": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\"",
@@ -30,6 +70,13 @@
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run"
   },
-  "dependencies": { "jose": "^6.2.3", "zod": "^4.2.1" },
-  "devDependencies": { "@types/node": "^20.19.43", "typescript": "^5.9.3", "vitest": "^4.0.16" }
+  "dependencies": {
+    "jose": "^6.2.3",
+    "zod": "^4.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.16"
+  }
 }
